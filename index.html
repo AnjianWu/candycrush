@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+PS2 - CandyCrush UI
+-->
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Candy Crush</title>
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href="game.css">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js"></script>
+
+<!-- Constructible EventTarget polyfill — Only Chrome 64+ supports constructible EventTarget objects natively -->
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+
+<script src="util.js"></script>
+<script src="candy.js"></script>
+<script src="board.js"></script>
+<script src="rules.js"></script>
+<script src="game.js"></script>
+
+
+</head>
+<body>
+  
+<div class="container">
+  
+  <!-- Column 1: The logo, new game button, show hint button, and score -->
+
+  <div class="col1">    
+    <div id = "logo" style="overflow:hidden">
+    Candy
+    Crush!
+    </div>
+    
+    <div id="points" class = "grey_background">
+      <div id = "score" class = "grey_background"></div>
+      <div id = "point_text" class = "grey_background">Points</div>
+    </div>
+    
+    <button id="newgame">New Game</button>
+    
+    
+
+  </div>
+  
+  <!-- Column 2: Gameboard -->
+
+    
+  <div class="col2">
+    <table id = "gameboard" class = 'gamecontainer'>
+    </table>
+  </div>
+  
+  <!-- Column 3: Controller Buttons -->
+  <!--
+  <div class="col3">
+      <div id="controller">
+      <button id="up" class ="good">↑</button>
+      <button id="down" class ="good">↓</button>
+      <button id="left" class ="good">←</button>
+      <button id="right" class ="good">→</button>
+      <input type="text" id="select" value="" class="bad">
+      <button id="crush_button">Crush Once</button>
+      </div>
+  </div>
+  -->
+  
+</div>
+
+</body>
+</html>
+

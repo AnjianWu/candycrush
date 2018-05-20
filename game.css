@@ -1,0 +1,431 @@
+/* Global variables */
+:root {
+	--color-light-gray: hsl(220, 10%, 85%);
+	--color-red: hsl(0, 80%, 48%);
+	--color-yellow: gold;
+	--color-green: hsl(85, 90%, 37%);
+	--color-orange: hsl(30, 100%, 50%);
+	--color-blue: hsl(210, 80%, 45%);
+	--color-purple: purple;
+	--duration-move: 0.1s; /* Duration to move by 1 cell */
+	--duration-fade: .4s;
+	
+	--from-x:0px;
+	--from-y:0px;
+	--to-x: 0px;
+	--to-y: 0px;
+	
+	
+	--board-size:380px;
+	--shape-size:9;
+
+}
+
+.grey_background{background-color: var(--color-light-gray); color: black;}
+.red_background{background-color: var(--color-red);color: white;}
+.yellow_background{background-color: var(--color-yellow);color: white;}
+.green_background{background-color: var(--color-green);color: white;}
+.orange_background{background-color: var(--color-orange);color: white;}
+.blue_background{background-color: var(--color-blue);color: white;}
+.purple_background{background-color: var(--color-purple);color: white;}
+
+img{
+	
+	width: calc(var(--board-size)/var(--shape-size));
+	height: calc(var(--board-size)/var(--shape-size));
+
+}
+
+
+html {
+
+}
+
+body {
+	margin: auto;
+	
+
+}
+
+/* REMOVE borders from columns*/
+row {
+	border: 1px var(--color-purple) dashed;
+}
+
+main {
+	border: 1px var(--color-yellow) dashed;
+}
+
+/*#controls {
+	border: 1px var(--color-green) dashed;
+}*/
+
+.board {
+	/* Variables to use in creating the board */
+	--grid-color: silver;
+	--grid-gap: 1px;
+	--cell-outer: calc(var(--board-size) / var(--size));
+	--cell: calc(var(--cell-outer) - var(--grid-gap));
+}
+
+.container {
+  /* ... */
+	margin: 0px;
+ display: flex;
+ flex-direction: row;
+	/*align-items: stretch; */
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.container23{
+	 display: flex;
+  flex-direction: row;
+}
+
+
+
+.col1{
+
+
+}
+.col2{
+	/*float: left;
+	width:500px;
+	height: 400px;*/
+
+}
+.col3{
+	/*float: left;
+	width: 250px;
+	height: 400px;*/
+
+	
+	align-items: center;
+	
+}
+
+
+/*BUTTONS on right column!!!!*/
+
+button{
+	display: block;
+ border-radius: 8px;
+	font-size: 15px;
+ font-family: sans-serif;
+ height: 50px;
+ width: 50px;
+	border-style: solid;
+	border-color: grey;
+	border-width: thin;
+}
+.good {
+  color: white;
+  background: #6CB254;
+  text-decoration: none;
+
+}
+
+.good_hint {
+  color: white;
+  background: purple;
+  text-decoration: none;
+
+}
+
+.bad {
+  color: #adaaad;
+  background: grey;
+  text-decoration: none;
+}
+
+.goodtext {
+	color: white;
+ background: white;
+
+}
+
+#newgame{
+	
+	font-family: sans-serif;
+	background: darkblue;
+	color: white;
+	animation: none;
+	margin: 10px;
+}
+
+
+#showhint{
+	width:90%;
+	max-width: 400px;
+	font-family: sans-serif;
+	animation: none;
+	font-size: larger;
+		margin: 10px;
+
+}
+
+#controller{
+	
+	width: 200px;
+	height: 250px;
+	margin: auto;
+}
+
+#up{
+    position:relative;
+    top: 0px;
+    left: 60px;
+}
+
+#down{
+    position:relative;
+    top: 70px;
+    left: 60px;
+}
+
+
+#right {
+    position:relative;
+    top: -90px;
+    left: 125px;
+}
+
+#left {
+    position:relative;
+    top: -40px;
+    left: 0px;
+}
+
+#select {
+	position:relative;
+	top: -142px;
+	left: 58px;
+	
+	border-style: solid;
+	border-color: grey;
+	border-width: thin;
+	
+	display: block;
+	border-radius: 8px;
+	font-size: 20px;
+	font-family: sans-serif;
+	height: 50px;
+	width: 50px;
+
+	text-align: center;
+	
+	}
+#button_disp:hover {
+    background-color: white;
+    color: white;
+}
+
+#crush_button {
+    position:relative;
+    top: -70px;
+    left: 35px;
+				width: 100px;
+}
+
+.text{
+	
+	resize: none;
+	color: black;
+}
+
+/*Stuff on left column!!!!*/
+
+
+#logo{
+	
+	width:90%;
+	max-width: 200px;
+
+	resize: none;
+	border-style: hidden;
+	font-family: sans-serif;
+	color: darkblue;
+	font-size: 50px;
+ text-align: center;
+ 	
+}
+
+#newgame {
+    /*top: 200px;
+				left: 150px;*/
+				width:90%;
+
+				max-width: 400px;
+				font-size: larger;
+
+}
+
+
+
+/* MIDDDLE STUFFF*/
+
+#points {
+	width:90%;
+
+	height: 20%;
+	max-width: 400px;
+	border-style: solid;
+	border-color: grey;
+	border-width: thin;
+	
+	border-radius: 8px;
+	font-family: sans-serif;
+	margin: 10px;
+
+	text-align: center;
+}
+#score{
+	font-size: 300%;
+	
+}
+#point_text{
+	
+	font-size: 100%;
+}
+
+#gameboard {
+	
+	display: block;
+	
+	/*max-width: 400px;*/
+	border: none;
+
+	
+}
+
+
+
+.grid {
+	margin:0px;
+	padding:0px;
+	border:none;
+	outline:1px solid grey;
+	display: inline-block;
+	
+	margin-bottom: 0px;
+	
+	align-items: center;
+ justify-content: center;
+	
+	
+	width: calc(var(--board-size)/var(--shape-size));
+	height: calc(var(--board-size)/var(--shape-size));
+	max-height: calc(var(--board-size)/var(--shape-size));
+}
+
+	/* Animations ----/\/*/
+
+.candy_pulsing
+{
+	animation: pulse var(--duration-fade) ease-in infinite alternate;
+}
+
+.candy_crushed{
+		animation: disappear var(--duration-fade) ease-in forwards;
+
+}
+
+
+.candy_swap{
+	
+	 position: relative;
+		animation: swap var(--duration-move) linear forwards;
+}
+
+@keyframes pulse {
+    from {
+							filter: brightness(100%);}
+    to {transform: scale(0.7); 
+								filter: brightness(150%);}
+	}
+	
+	@keyframes disappear {
+		0%{
+						opacity: 1;
+		}
+		50%{
+						opacity: 0.5;
+		}
+		100%{
+						display: none;
+						opacity: 0;
+		}
+	}
+	
+@keyframes swap {
+    from {left: var(--from-x);
+							top:var(--from-y)}
+    to {left: var(--to-x);
+							top:var(--to-y)}
+	}
+	
+	/* Animations ----^^^^^*/
+
+.grid_label {
+	display: inline-block;
+ padding:0px;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: calc(0.7*var(--board-size)/var(--shape-size));  /*make text almost as big as candy*/
+	width: calc(var(--board-size)/var(--shape-size));
+	height: calc(var(--board-size)/var(--shape-size));
+ font-family: sans-serif;
+}
+
+@media (max-width: 960px) {
+
+			.container {
+					/* ... */
+				margin: 0px;
+				display: flex;
+				flex-direction: column;
+				/*align-items: stretch; */
+				flex-wrap: wrap;
+			 justify-content: center;
+			}
+			.col1{
+
+			width: 350px;
+			}		
+			
+}
+@media (max-width: 400px) {
+		
+		.col1{
+
+			width: 90vw;
+			}		
+			.col2{
+				min-width: 0px;
+			}
+			.col3{
+				width: 90vw;
+			}
+			.container {
+					/* ... */
+				margin: 0px;
+				display: flex;
+				flex-direction: column;
+				/*align-items: stretch; */
+				flex-wrap: wrap;
+			 justify-content: center;
+				
+
+			}
+			:root {
+					--board-size:90vw;
+			}
+			
+}
+
+
